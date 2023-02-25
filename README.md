@@ -1,2 +1,3 @@
 # Jump-Game
-Uma página de um Web Game simples produzido com html, css e javascipt.
+<h2>🎮 Aplicação dos estudos iniciais em javascript, com a produção de um jumping game</h2>
+<p>Produção de um jogo simples de saltar sobre obstáculos, utilizando algumas funções do javascript.</p>
