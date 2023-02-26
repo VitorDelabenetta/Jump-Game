@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Janela do Jogo */
+
+.game-board {
+    width: 100%;
+    height: 75vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+
+    border-bottom: solid 12px #241814;
+    background: linear-gradient(rgba(108, 104, 144, 0.803), rgba(62, 33, 71, 0.55)),url(/Imagens/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: 100vw;
+}
+
+/* Elementos do Jogo */
+
+.cloud {
+    position: absolute;
+    margin-top: 100px;
+    width: 300px;
+    animation: cloud-animation 10s infinite linear;
+    filter: drop-shadow(4px 4px 8px #757474c9);
+    filter: sepia(0.4);
+}
+
+.clouds {
+    position: absolute;
+    margin-top: 30px;
+    width: 300px;
+    animation: cloud-animation 15s infinite linear;
+    filter: drop-shadow(4px 4px 8px #757474c9);
+    filter: sepia(0.5);
+}
+
+.block {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: block-animation 2s infinite linear;
+}
+
+.sprite {
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: sprite-jump 500ms ease-out;
+}
+
+footer p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin: 5vh;
+}
+
+/* Animação */ 
+
+@keyframes cloud-animation {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+    /* Indicar o início e a direção da animação */
+}
+
+@keyframes block-animation {
+    from {
+        right: -70px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes sprite-jump {
+    0% {
+        bottom: 0;
+    }
+
+    40%, 50%, 60% {
+        bottom: 120px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+    /* Indicar com porcentagem a animação também funciona */
+}
+
+/* Responsividade para a imagem de fundo */
+
+@media only screen and (max-width: 930px) {
+    .game-board {
+        background-size: 140vh;
+    }
+}
